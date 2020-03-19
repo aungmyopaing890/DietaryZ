@@ -15,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.dietaryz.utils.Constants;
 import com.google.android.material.snackbar.Snackbar;
 
-// to update to git,1. first press on comit,
+// to update to git,1. first press on commit, 2. goto VCS>Git>push
 
 public class FoodEntry extends AppCompatActivity {
 
@@ -28,9 +28,9 @@ public class FoodEntry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_entry);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar ab = getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled( true );
+        //setSupportActionBar(toolbar);
+        //ActionBar ab = getSupportActionBar();
+        //ab.setDisplayHomeAsUpEnabled( true );
         initialize();
         actionInitializer();
     }
@@ -53,7 +53,7 @@ public class FoodEntry extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if( isValid()){
-                    Intent state = new Intent(getBaseContext(), MainActivity.class );
+                    Intent state = new Intent(getBaseContext(), FoodDisplay.class );
                     state.putExtra(Constants.FOODNAME , txtfoodname.getText().toString().trim() );
                     state.putExtra( Constants.FOODGROUP, txtfoodgroup.getText().toString().trim() );
                     state.putExtra( Constants.TIME, txttime.getText().toString().trim() );
@@ -62,8 +62,8 @@ public class FoodEntry extends AppCompatActivity {
                     state.putExtra(Constants.NOTE, txtnote.getText().toString().trim() );
                     state.putExtra(Constants.NAMEOFREPOTER, txtnameofrepoter.getText().toString().trim() );
 
-                    setResult( RESULT_OK, state );
-                    finish();
+                    startActivity(state);
+                    //finish();
                 }
             }
         });
