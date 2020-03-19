@@ -15,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.dietaryz.utils.Constants;
 import com.google.android.material.snackbar.Snackbar;
 
-
+// to update to git,1. first press on comit,
 
 public class FoodEntry extends AppCompatActivity {
 
