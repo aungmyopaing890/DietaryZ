@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".FoodEntry"
+    tools:showIn="@layout/activity_food_entry">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:id="@+id/view2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:fitsSystemWindows="true"
+        app:contentScrim="?attr/colorPrimary"
+        app:expandedTitleMarginEnd="64dp"
+        app:expandedTitleMarginStart="48dp"
+        app:expandedTitleTextAppearance="@android:color/transparent"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/txtfoodname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            android:hint="Food Name"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/txtfoodgroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Food group"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/txttime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Time"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtmealtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Meal type"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txtnote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Note"
+            android:inputType="text" />
+
+
+        <EditText
+            android:id="@+id/txtnameofrepoter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name of repoter"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnadd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btncancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:textAllCaps="false"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            android:layout_weight="0.5"
+            android:text="Cancel"
+             android:padding="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
